@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RideBuddy — Brise ta balade solo</title>
+  <meta name="description" content="RideBuddy réunit les motards de ta région pour rouler ensemble. Plus de sécurité, plus de plaisir. Télécharge l'app iOS et Android.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RideBuddy — Brise ta balade solo">
+  <meta property="og:description" content="RideBuddy réunit les motards de ta région pour rouler ensemble. Plus de sécurité, plus de plaisir.">
+  <meta property="og:image" content="https://ridebuddy.app/assets/img/og-image.png">
+  <meta property="og:url" content="https://ridebuddy.app/">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "RideBuddy",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "SocialNetworkingApplication",
+    "description": "RideBuddy réunit les motards de ta région pour rouler ensemble. Plus de sécurité, plus de plaisir.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="RideBuddy — Accueil">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14171C"/><path d="M8 22c2-6 5-12 10-14s6 4 4 10-5 8-8 7-2-3 0-6 4-5 5-3" fill="none" stroke="#FF6A1A" stroke-width="2.5" stroke-linecap="round"/></svg>
+        Ride<span>Buddy</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <div class="nav__links">
+          <a href="#features" class="nav__link">Fonctionnalités</a>
+          <a href="#comment-ca-marche" class="nav__link">Comment ça marche</a>
+          <a href="#telecharger" class="btn btn--primary btn--small">Télécharger</a>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="#features">Fonctionnalités</a>
+    <a href="#comment-ca-marche">Comment ça marche</a>
+    <a href="#telecharger">Télécharger</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__bg">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="road1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF6A1A" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#FF6A1A" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="road2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FF6A1A" stop-opacity="0.08"/>
+              <stop offset="100%" stop-color="#FF6A1A" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M-100 600 C200 500, 400 200, 700 300 S1100 100, 1500 200" fill="none" stroke="url(#road1)" stroke-width="1.5"/>
+          <path d="M-100 700 C300 600, 500 300, 800 400 S1200 200, 1600 300" fill="none" stroke="url(#road1)" stroke-width="1"/>
+          <path d="M1540 600 C1200 500, 900 800, 600 600 S200 700, -100 500" fill="none" stroke="url(#road2)" stroke-width="1.5"/>
+          <path d="M1540 800 C1300 700, 1000 400, 700 500 S300 300, -100 400" fill="none" stroke="url(#road2)" stroke-width="0.8"/>
+          <circle cx="350" cy="280" r="1.5" fill="#FF6A1A" opacity="0.3"/>
+          <circle cx="780" cy="350" r="2" fill="#FF6A1A" opacity="0.2"/>
+          <circle cx="1100" cy="180" r="1.5" fill="#FF6A1A" opacity="0.25"/>
+          <circle cx="550" cy="500" r="1" fill="#FF6A1A" opacity="0.15"/>
+        </svg>
+        <div class="hero__gradient"></div>
+      </div>
+      <div class="container hero__content">
+        <h1>Brise ta<br><span class="text-gradient">balade solo</span></h1>
+        <p class="hero__subtitle">
+          RideBuddy réunit les motards de ta région pour rouler ensemble.
+          Plus de sécurité, plus de plaisir, zéro prise de tête.
+        </p>
+        <div class="hero__actions">
+          <a href="#" class="store-badge" aria-label="Télécharger sur l'App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+            <div>
+              <div class="store-badge__label">Télécharger sur</div>
+              <div class="store-badge__store">App Store</div>
+            </div>
+          </a>
+          <a href="#" class="store-badge" aria-label="Télécharger sur Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33a1 1 0 0 1 0 1.724l-2.302 1.33-2.535-2.535 2.535-2.849zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"/></svg>
+            <div>
+              <div class="store-badge__label">Disponible sur</div>
+              <div class="store-badge__store">Google Play</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Fonctionnalités</span>
+          <h2>Tout ce qu'il faut pour<br><span class="text-gradient">rouler ensemble</span></h2>
+          <p>Des outils pensés par des motards, pour des motards.</p>
+        </div>
+        <div class="features__grid">
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 8l-4 4-4-4"/><path d="M8 16l4-4 4 4"/></svg>
+            </div>
+            <h3>Balades à portée de swipe</h3>
+            <p>Découvre les sorties autour de toi en un geste. Filtre par style, distance et date pour trouver la balade parfaite.</p>
+          </article>
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Chat intégré</h3>
+            <p>Discute en privé avant de rejoindre une balade, puis dans le chat de groupe une fois accepté par l'organisateur.</p>
+          </article>
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Profils motards</h3>
+            <p>Pseudo, moto, style de conduite, expérience, terrains préférés. Montre qui tu es sur la route sans révéler ton identité.</p>
+          </article>
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3>Notifications temps réel</h3>
+            <p>Nouvelle balade à côté de chez toi, demande acceptée, nouveau message. Tu ne rates jamais rien.</p>
+          </article>
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Sécurité du groupe</h3>
+            <p>Rouler à plusieurs, c'est se protéger mutuellement. Système de signalement et blocage intégrés pour rouler serein.</p>
+          </article>
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Privacy first</h3>
+            <p>Pseudo uniquement, pas de vrai nom, pas de tracking. Tes données restent en Europe sur des serveurs sécurisés.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMMENT ÇA MARCHE ===== -->
+    <section class="steps" id="comment-ca-marche">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Comment ça marche</span>
+          <h2>En route en<br><span class="text-gradient">4 étapes</span></h2>
+        </div>
+        <div class="steps__grid">
+
+          <div class="step fade-in">
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="step__number" aria-hidden="true"></div>
+            <h3>Crée ton profil</h3>
+            <p>Pseudo, moto, style de conduite. En 2 minutes, c'est fait.</p>
+          </div>
+
+          <div class="step fade-in">
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <div class="step__number" aria-hidden="true"></div>
+            <h3>Explore les balades</h3>
+            <p>Swipe ou liste, trouve la sortie qui te correspond autour de toi.</p>
+          </div>
+
+          <div class="step fade-in">
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="step__number" aria-hidden="true"></div>
+            <h3>Rejoins le groupe</h3>
+            <p>Envoie ta demande, discute avec l'organisateur, fais connaissance.</p>
+          </div>
+
+          <div class="step fade-in">
+            <div class="step__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="step__number" aria-hidden="true"></div>
+            <h3>Roulez ensemble</h3>
+            <p>Le jour J, retrouvez-vous et profitez de la route à plusieurs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta" id="telecharger">
+      <div class="container">
+        <span class="section-label">Télécharger</span>
+        <h2>Prêt à <span class="text-gradient">rouler</span> ?</h2>
+        <p>Télécharge RideBuddy et rejoins la communauté des motards de ta région.</p>
+        <div class="store-badges">
+          <a href="#" class="store-badge" aria-label="Télécharger sur l'App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/></svg>
+            <div>
+              <div class="store-badge__label">Télécharger sur</div>
+              <div class="store-badge__store">App Store</div>
+            </div>
+          </a>
+          <a href="#" class="store-badge" aria-label="Télécharger sur Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33a1 1 0 0 1 0 1.724l-2.302 1.33-2.535-2.535 2.535-2.849zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"/></svg>
+            <div>
+              <div class="store-badge__label">Disponible sur</div>
+              <div class="store-badge__store">Google Play</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div>&copy; 2025 RideBuddy. Tous droits réservés.</div>
+      <nav class="footer__links" aria-label="Liens légaux">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Politique de confidentialité</a>
+        <a href="/cgu">CGU</a>
+        <a href="mailto:[EMAIL]">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
