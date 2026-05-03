@@ -343,7 +343,7 @@ p + p { margin-top: var(--space-md); }
 .logo img {
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 10px;
+  border-radius: 22%;
 }
 
 .logo svg {
