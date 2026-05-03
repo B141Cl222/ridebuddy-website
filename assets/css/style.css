@@ -3,21 +3,22 @@
    ======================================== */
 
 :root {
-  /* Colors */
-  --bg-base: #0B0D10;
-  --bg-elevated: #14171C;
-  --bg-overlay: #1C2026;
-  --border: #262B33;
-  --border-light: #2E343D;
+  /* Colors — matched to app logo (navy + orange) */
+  --bg-base: #0C1824;
+  --bg-elevated: #12223A;
+  --bg-overlay: #1A2E42;
+  --border: #243B52;
+  --border-light: #2D4A63;
 
   --text-primary: #F5F5F7;
-  --text-secondary: #A1A7B3;
-  --text-muted: #6B7280;
+  --text-secondary: #94A3B8;
+  --text-muted: #5E7A94;
 
-  --accent: #FF6A1A;
-  --accent-hover: #FF8642;
-  --accent-soft: rgba(255, 106, 26, 0.1);
-  --accent-glow: rgba(255, 106, 26, 0.15);
+  --accent: #F96B1C;
+  --accent-hover: #FF8A42;
+  --accent-soft: rgba(249, 107, 28, 0.1);
+  --accent-glow: rgba(249, 107, 28, 0.15);
+  --accent-gradient: linear-gradient(135deg, #F96B1C 0%, #E8A030 100%);
 
   --success: #4ADE80;
   --danger: #EF4444;
@@ -172,7 +173,7 @@ h4 { font-size: 1.125rem; }
 p + p { margin-top: var(--space-md); }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent) 0%, #FFB347 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -316,7 +317,7 @@ p + p { margin-top: var(--space-md); }
 }
 
 .header.scrolled {
-  background: rgba(11, 13, 16, 0.92);
+  background: rgba(12, 24, 36, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -337,6 +338,12 @@ p + p { margin-top: var(--space-md); }
   font-size: 1.375rem;
   font-weight: 700;
   color: var(--text-primary);
+}
+
+.logo img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 6px;
 }
 
 .logo svg {
@@ -405,7 +412,7 @@ p + p { margin-top: var(--space-md); }
   position: fixed;
   inset: 0;
   z-index: 99;
-  background: rgba(11, 13, 16, 0.97);
+  background: rgba(12, 24, 36, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
