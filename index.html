@@ -56,7 +56,7 @@
       <nav class="nav" aria-label="Navigation principale">
         <div class="nav__links">
           <a href="#features" class="nav__link">Fonctionnalités</a>
-          <a href="#comment-ca-marche" class="nav__link">Comment ça marche</a>
+          <a href="./contact" class="nav__link">Contact</a>
           <a href="#telecharger" class="btn btn--primary btn--small">Télécharger</a>
         </div>
         <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
@@ -69,7 +69,7 @@
   <!-- Mobile Nav -->
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a href="#features">Fonctionnalités</a>
-    <a href="#comment-ca-marche">Comment ça marche</a>
+    <a href="./contact">Contact</a>
     <a href="#telecharger">Télécharger</a>
   </div>
 
@@ -142,8 +142,16 @@
             <div class="card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 8l-4 4-4-4"/><path d="M8 16l4-4 4 4"/></svg>
             </div>
-            <h3>Balades à portée de swipe</h3>
-            <p>Découvre les sorties autour de toi en un geste. Filtre par style, distance et date pour trouver la balade parfaite.</p>
+            <h3>3 façons de découvrir</h3>
+            <p>Swipe les balades comme sur Tinder, parcours la liste avec filtres (ville, rayon, style, dates), ou explore la carte interactive.</p>
+          </article>
+
+          <article class="card fade-in">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Crée ta balade</h3>
+            <p>Titre, description, ville de départ, date, durée estimée, style de conduite, nombre de places et photo de couverture. Tout est personnalisable.</p>
           </article>
 
           <article class="card fade-in">
@@ -151,7 +159,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
             <h3>Chat intégré</h3>
-            <p>Discute en privé avant de rejoindre une balade, puis dans le chat de groupe une fois accepté par l'organisateur.</p>
+            <p>Discute en privé avant de rejoindre, puis dans le chat de groupe une fois accepté. Notifications push en temps réel pour ne rien rater.</p>
           </article>
 
           <article class="card fade-in">
@@ -159,23 +167,15 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
             <h3>Profils motards</h3>
-            <p>Pseudo, moto, style de conduite, expérience, terrains préférés. Montre qui tu es sur la route sans révéler ton identité.</p>
-          </article>
-
-          <article class="card fade-in">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-            </div>
-            <h3>Notifications temps réel</h3>
-            <p>Nouvelle balade à côté de chez toi, demande acceptée, nouveau message. Tu ne rates jamais rien.</p>
+            <p>Pseudo, bio, modèle de moto, style, expérience, terrains préférés, galerie photos. Montre qui tu es sur la route.</p>
           </article>
 
           <article class="card fade-in">
             <div class="card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h3>Sécurité du groupe</h3>
-            <p>Rouler à plusieurs, c'est se protéger mutuellement. Système de signalement et blocage intégrés pour rouler serein.</p>
+            <h3>Sécurité & modération</h3>
+            <p>Rouler à plusieurs, c'est se protéger mutuellement. Signalement, blocage et modération admin intégrés.</p>
           </article>
 
           <article class="card fade-in">
@@ -183,7 +183,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
             <h3>Privacy first</h3>
-            <p>Pseudo uniquement, pas de vrai nom, pas de tracking. Tes données restent en Europe sur des serveurs sécurisés.</p>
+            <p>Pseudo uniquement, pas de tracking, données en Europe. Disponible en français et en anglais.</p>
           </article>
 
         </div>
@@ -205,7 +205,7 @@
             </div>
             <div class="step__number" aria-hidden="true"></div>
             <h3>Crée ton profil</h3>
-            <p>Pseudo, moto, style de conduite. En 2 minutes, c'est fait.</p>
+            <p>Inscris-toi par email, Apple ou Google. Renseigne ta moto et ton style.</p>
           </div>
 
           <div class="step fade-in">
@@ -214,7 +214,7 @@
             </div>
             <div class="step__number" aria-hidden="true"></div>
             <h3>Explore les balades</h3>
-            <p>Swipe ou liste, trouve la sortie qui te correspond autour de toi.</p>
+            <p>Swipe, liste avec filtres ou carte interactive. Trouve la sortie idéale.</p>
           </div>
 
           <div class="step fade-in">
@@ -272,9 +272,9 @@
       <div>&copy; 2026 RideBuddy. Tous droits réservés.</div>
       <nav class="footer__links" aria-label="Liens légaux">
         <a href="./mentions-legales">Mentions légales</a>
-        <a href="./confidentialite">Politique de confidentialité</a>
+        <a href="./confidentialite">Confidentialité</a>
         <a href="./cgu">CGU</a>
-        <a href="mailto:aidesfinder.app@gmail.com">Contact</a>
+        <a href="./contact">Contact</a>
       </nav>
     </div>
   </footer>

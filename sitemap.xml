@@ -17,7 +17,12 @@
   </url>
   <url>
     <loc>https://ridebuddy.app/cgu</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ridebuddy.app/contact</loc>
+    <lastmod>2026-05-14</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>

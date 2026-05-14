@@ -27,7 +27,7 @@
       <nav class="nav" aria-label="Navigation principale">
         <div class="nav__links">
           <a href="../" class="nav__link">Accueil</a>
-          <a href="../#features" class="nav__link">Fonctionnalités</a>
+          <a href="../contact" class="nav__link">Contact</a>
           <a href="../#telecharger" class="btn btn--primary btn--small">Télécharger</a>
         </div>
         <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
@@ -39,7 +39,7 @@
 
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <a href="../">Accueil</a>
-    <a href="../#features">Fonctionnalités</a>
+    <a href="../contact">Contact</a>
     <a href="../#telecharger">Télécharger</a>
   </div>
 
@@ -48,7 +48,7 @@
     <section class="legal-hero">
       <div class="container container--narrow">
         <h1>Politique de confidentialité</h1>
-        <p>Dernière mise à jour : 2 mai 2026</p>
+        <p>Dernière mise à jour : 14 mai 2026</p>
       </div>
     </section>
 
@@ -62,9 +62,11 @@
           <a href="#finalites">Finalités</a>
           <a href="#base-legale">Base légale</a>
           <a href="#duree">Durée de conservation</a>
+          <a href="#purge">Purge automatique</a>
           <a href="#sous-traitants">Sous-traitants</a>
           <a href="#transferts">Transferts hors UE</a>
           <a href="#droits">Vos droits</a>
+          <a href="#suppression">Suppression de compte</a>
           <a href="#mineurs">Mineurs</a>
           <a href="#cookies">Cookies</a>
           <a href="#securite">Sécurité</a>
@@ -84,120 +86,184 @@
           <h2 id="donnees-collectees">Données collectées</h2>
           <p>Dans le cadre de l'utilisation de l'application RideBuddy, les données suivantes sont collectées :</p>
 
-          <h3>Données de compte</h3>
+          <h3>Données d'authentification</h3>
           <ul>
-            <li><strong>Adresse e-mail</strong> — utilisée pour l'inscription et la connexion</li>
-            <li><strong>Mot de passe</strong> — chiffré, jamais stocké en clair</li>
-            <li><strong>Pseudo</strong> — identifiant public choisi par l'utilisateur</li>
+            <li><strong>Adresse e-mail</strong> — inscription et connexion</li>
+            <li><strong>Mot de passe</strong> — hashé, jamais stocké en clair (géré par Supabase Auth)</li>
+            <li><strong>Identifiant Apple / Google</strong> — si connexion via Apple Sign In ou Google Sign In</li>
           </ul>
 
           <h3>Données de profil</h3>
           <ul>
-            <li><strong>Photo de profil</strong> — optionnelle, fournie par l'utilisateur</li>
-            <li><strong>Informations moto</strong> — marque, modèle (optionnel)</li>
+            <li><strong>Pseudo</strong> — identifiant public choisi par l'utilisateur</li>
+            <li><strong>Bio</strong> — description libre (optionnelle)</li>
+            <li><strong>Modèle de moto</strong> — marque et modèle (optionnel)</li>
             <li><strong>Style de conduite</strong> — tranquille, sportif, touring, etc.</li>
             <li><strong>Niveau d'expérience</strong> — débutant, intermédiaire, confirmé</li>
             <li><strong>Terrains préférés</strong> — route, montagne, ville, etc.</li>
+            <li><strong>Ville d'origine</strong></li>
+            <li><strong>Avatar et galerie photos</strong> — images fournies par l'utilisateur</li>
           </ul>
 
           <h3>Données d'utilisation</h3>
           <ul>
-            <li><strong>Ville de départ des balades</strong> — géolocalisation au niveau ville uniquement, pas de coordonnées GPS précises</li>
-            <li><strong>Messages de chat</strong> — conversations privées (1:1) et de groupe</li>
-            <li><strong>Contenus des annonces</strong> — titre, description, date, lieu, nombre de participants</li>
+            <li><strong>Annonces de balade</strong> — titre, description, ville de départ (géocodée), date/heure, durée et km estimés, style, nombre max de participants, photo de couverture</li>
+            <li><strong>Messages de chat</strong> — conversations privées (1:1) et de groupe, liées aux balades</li>
+            <li><strong>Swipes</strong> — likes et passes sur les annonces de balade</li>
+            <li><strong>Signalements et blocages</strong> — rapports de modération</li>
           </ul>
 
           <h3>Données techniques</h3>
           <ul>
-            <li><strong>Token de notification push (APNs / FCM)</strong> — nécessaire pour l'envoi des notifications en temps réel</li>
+            <li><strong>Token de notification push</strong> — APNs (iOS) ou FCM (Android), nécessaire pour les notifications en temps réel</li>
           </ul>
 
           <div class="info-box">
-            <p><strong>Ce que nous ne collectons pas :</strong> nom réel, prénom, adresse postale, numéro de téléphone, genre, date de naissance, coordonnées GPS précises, données bancaires.</p>
+            <p><strong>Ce que nous ne collectons pas :</strong> nom réel, prénom, adresse postale, numéro de téléphone, genre, date de naissance, coordonnées GPS précises, données bancaires. Aucun tracker, aucun outil d'analyse tiers.</p>
           </div>
 
           <h2 id="finalites">Finalités du traitement</h2>
-          <p>Vos données sont collectées et traitées pour les finalités suivantes :</p>
           <ul>
             <li>Création et gestion de votre compte utilisateur</li>
-            <li>Fonctionnement du service (annonces de balades, recherche, mise en relation)</li>
+            <li>Fonctionnement du service (annonces de balades, recherche, mise en relation via swipe)</li>
             <li>Communication entre utilisateurs via la messagerie intégrée</li>
             <li>Envoi de notifications push relatives à l'activité de votre compte</li>
             <li>Modération et lutte contre les comportements abusifs</li>
-            <li>Amélioration du service</li>
+            <li>Géocodage des villes de départ (conversion nom de ville → coordonnées pour l'affichage sur carte)</li>
           </ul>
 
           <h2 id="base-legale">Base légale</h2>
-          <p>Les traitements de données reposent sur les bases légales suivantes :</p>
           <ul>
-            <li><strong>Exécution du contrat</strong> (article 6.1.b du RGPD) — pour le fonctionnement du service et la gestion de votre compte</li>
-            <li><strong>Intérêt légitime</strong> (article 6.1.f du RGPD) — pour la modération et la sécurité du service</li>
-            <li><strong>Consentement</strong> (article 6.1.a du RGPD) — pour l'envoi de notifications push (consentement recueilli via les paramètres de votre appareil)</li>
+            <li><strong>Exécution du contrat</strong> (article 6.1.b du RGPD) — fonctionnement du service et gestion de votre compte</li>
+            <li><strong>Intérêt légitime</strong> (article 6.1.f du RGPD) — modération et sécurité du service</li>
+            <li><strong>Consentement</strong> (article 6.1.a du RGPD) — notifications push (consentement recueilli via les paramètres de votre appareil)</li>
           </ul>
 
           <h2 id="duree">Durée de conservation</h2>
           <ul>
-            <li><strong>Données de compte et de profil</strong> — conservées pendant toute la durée d'utilisation du service, puis supprimées dans un délai de 30 jours suivant la suppression du compte</li>
-            <li><strong>Messages de chat</strong> — conservés pendant toute la durée de la balade concernée et 6 mois après la date de la balade, puis supprimés automatiquement</li>
-            <li><strong>Annonces de balades</strong> — conservées 6 mois après la date de la balade, puis supprimées automatiquement</li>
-            <li><strong>Tokens de notification push</strong> — supprimés dès la désactivation des notifications ou la suppression du compte</li>
-            <li><strong>Données de signalement</strong> — conservées 1 an à des fins de modération, puis anonymisées</li>
+            <li><strong>Données de compte et de profil</strong> — conservées tant que le compte est actif, supprimées immédiatement à la suppression du compte</li>
+            <li><strong>Photos (avatar, galerie, couvertures)</strong> — supprimées avec le profil ou la balade associée</li>
+            <li><strong>Annonces de balades fermées</strong> — supprimées 30 jours après fermeture si aucun participant</li>
+            <li><strong>Messages de chat</strong> — liés à la balade, supprimés en cascade avec celle-ci</li>
+            <li><strong>Swipes (likes/passes)</strong> — purgés après 12 mois</li>
+            <li><strong>Signalements</strong> — purgés 6 mois après traitement</li>
+            <li><strong>Blocages</strong> — purgés après 24 mois</li>
+            <li><strong>Tokens de notification push</strong> — supprimés à la déconnexion ou suppression du compte</li>
+            <li><strong>Données d'authentification</strong> — gérées par Supabase Auth, tant que le compte est actif</li>
+          </ul>
+
+          <h2 id="purge">Purge automatique des données</h2>
+          <p>Des tâches automatiques s'exécutent quotidiennement pour assurer la suppression des données selon les durées de conservation :</p>
+          <ul>
+            <li><strong>03:00 UTC</strong> — fermeture automatique des balades passées depuis 24h ; suppression des balades passées depuis plus de 30 jours sans participant</li>
+            <li><strong>04:00 UTC</strong> — purge des signalements résolus depuis plus de 6 mois ; purge des swipes de plus de 12 mois ; purge des blocages de plus de 24 mois</li>
           </ul>
 
           <h2 id="sous-traitants">Sous-traitants</h2>
-          <p>Nous faisons appel au sous-traitant suivant pour le stockage et le traitement des données :</p>
-          <p>
-            <strong>Supabase Inc.</strong><br>
-            Fonction : base de données, authentification, stockage de fichiers, fonctions serveur, communication temps réel<br>
-            Localisation des données : <strong>région Union Européenne</strong><br>
-            Politique de confidentialité de Supabase : supabase.com/privacy
-          </p>
-          <p>Les notifications push iOS sont transmises via les serveurs <strong>Apple Push Notification service (APNs)</strong> d'Apple Inc. Seul le token d'appareil est transmis, sans données personnelles additionnelles.</p>
+          <p>Nous faisons appel aux sous-traitants suivants :</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Usage</th>
+                <th>Localisation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Supabase (AWS eu-west)</td>
+                <td>Base de données, authentification, stockage, Edge Functions</td>
+                <td>UE (Irlande)</td>
+              </tr>
+              <tr>
+                <td>Apple APNs</td>
+                <td>Notifications push iOS</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Google FCM</td>
+                <td>Notifications push Android</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Nominatim / OpenStreetMap</td>
+                <td>Géocodage des villes</td>
+                <td>Pas de stockage côté OSM</td>
+              </tr>
+              <tr>
+                <td>Google (OAuth)</td>
+                <td>Authentification Google Sign In</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Apple (Sign In with Apple)</td>
+                <td>Authentification Apple Sign In</td>
+                <td>USA</td>
+              </tr>
+            </tbody>
+          </table>
 
           <h2 id="transferts">Transferts de données hors UE</h2>
-          <p>Vos données sont hébergées sur des serveurs situés dans l'Union Européenne (Supabase, région EU).</p>
-          <p>Des transferts ponctuels vers les États-Unis peuvent intervenir dans le cadre de l'envoi de notifications push via Apple (APNs). Ces transferts sont encadrés par les clauses contractuelles types de la Commission européenne.</p>
+          <p>Vos données sont hébergées sur des serveurs situés dans l'Union Européenne (Supabase, région AWS eu-west, Irlande).</p>
+          <p>Des transferts ponctuels vers les États-Unis interviennent dans le cadre de :</p>
+          <ul>
+            <li>L'envoi de notifications push via Apple APNs et Google FCM (seul le token d'appareil est transmis)</li>
+            <li>L'authentification via Apple Sign In et Google Sign In (données d'identité minimales)</li>
+          </ul>
+          <p>Ces transferts sont encadrés par les clauses contractuelles types de la Commission européenne et le EU-US Data Privacy Framework.</p>
 
           <h2 id="droits">Vos droits</h2>
-          <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+          <p>Conformément au RGPD, vous disposez des droits suivants :</p>
           <ul>
-            <li><strong>Droit d'accès</strong> — obtenir une copie de vos données personnelles</li>
-            <li><strong>Droit de rectification</strong> — corriger des données inexactes ou incomplètes</li>
-            <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+            <li><strong>Droit d'accès</strong> — toutes vos données sont consultables directement dans l'application</li>
+            <li><strong>Droit de rectification</strong> — modifiable à tout moment depuis votre profil</li>
+            <li><strong>Droit à l'effacement</strong> — suppression immédiate du compte depuis l'application (voir ci-dessous)</li>
             <li><strong>Droit à la limitation</strong> — demander la suspension du traitement</li>
-            <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré et couramment utilisé</li>
+            <li><strong>Droit à la portabilité</strong> — export de vos données au format JSON sur demande sous 30 jours (article 20 du RGPD)</li>
             <li><strong>Droit d'opposition</strong> — vous opposer au traitement de vos données</li>
-            <li><strong>Droit de retrait du consentement</strong> — retirer votre consentement à tout moment (notifications push)</li>
+            <li><strong>Droit de retrait du consentement</strong> — retirer votre consentement aux notifications push à tout moment via les paramètres de votre appareil</li>
           </ul>
-          <p>Pour exercer ces droits, contactez-nous à l'adresse : <a href="mailto:[EMAIL]">[EMAIL]</a></p>
-          <p>Nous nous engageons à répondre à votre demande dans un délai maximum de <strong>30 jours</strong>.</p>
-          <p>Vous disposez également du droit d'introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> : cnil.fr</p>
+          <p>Pour exercer ces droits : <a href="mailto:aidesfinder.app@gmail.com">aidesfinder.app@gmail.com</a>. Réponse sous <strong>30 jours</strong> maximum.</p>
+          <p>Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> : cnil.fr</p>
+
+          <h2 id="suppression">Suppression de compte (droit à l'oubli)</h2>
+          <div class="info-box">
+            <p><strong>Comment supprimer votre compte :</strong> dans l'application, allez dans Profil → Paramètres → Supprimer mon compte.</p>
+          </div>
+          <p>La suppression est <strong>immédiate et irréversible</strong> :</p>
+          <ul>
+            <li>Toutes les photos (avatar, galerie) sont supprimées du stockage</li>
+            <li>Suppression en cascade sur toutes les tables (profil, balades, messages, swipes, signalements, blocages)</li>
+            <li>Le token de notification push est supprimé</li>
+            <li>Le compte d'authentification est supprimé</li>
+          </ul>
 
           <h2 id="mineurs">Mineurs</h2>
-          <p>L'application RideBuddy n'est pas destinée aux personnes de moins de 16 ans. Aucune collecte de données n'est effectuée sciemment auprès de mineurs de moins de 16 ans. Si nous avons connaissance qu'un mineur de moins de 16 ans a fourni des données personnelles, celles-ci seront supprimées dans les meilleurs délais.</p>
+          <p>L'application RideBuddy n'est pas destinée aux personnes de moins de 18 ans. Aucune collecte de données n'est effectuée sciemment auprès de mineurs. Si nous avons connaissance qu'un mineur a fourni des données personnelles, celles-ci seront supprimées dans les meilleurs délais.</p>
 
           <h2 id="cookies">Cookies et trackers</h2>
-          <p>L'application RideBuddy <strong>n'utilise aucun cookie, pixel de suivi, ni outil d'analyse</strong> (pas de Google Analytics, pas de Facebook Pixel, pas de tracker tiers).</p>
-          <p>Le site web ridebuddy.app n'utilise aucun cookie non plus.</p>
+          <p>L'application RideBuddy <strong>n'utilise aucun cookie, pixel de suivi, ni outil d'analyse</strong> (pas de Google Analytics, pas de Firebase Analytics, pas de Facebook Pixel, pas de tracker tiers).</p>
+          <p>Le site web ridebuddy n'utilise aucun cookie non plus.</p>
 
           <h2 id="securite">Sécurité</h2>
-          <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :</p>
           <ul>
             <li>Chiffrement des connexions (HTTPS / TLS)</li>
-            <li>Mots de passe chiffrés via bcrypt</li>
-            <li>Row Level Security (RLS) sur la base de données</li>
+            <li>Mots de passe hashés via bcrypt (Supabase Auth)</li>
+            <li>Row Level Security (RLS) sur toutes les tables de la base de données</li>
             <li>Authentification par JSON Web Token (JWT)</li>
             <li>Accès restreint aux données en production</li>
+            <li>Purge automatique des données expirées</li>
           </ul>
 
           <h2 id="modifications">Modifications de cette politique</h2>
           <p>Nous nous réservons le droit de modifier cette politique de confidentialité. En cas de modification substantielle, les utilisateurs seront informés via une notification dans l'application. La date de dernière mise à jour est indiquée en haut de cette page.</p>
 
-          <h2 id="contact">Contact</h2>
-          <p>Pour toute question relative à cette politique de confidentialité ou à vos données personnelles :</p>
+          <h2 id="contact">Contact DPO</h2>
+          <p>Pour toute question relative à cette politique ou à vos données personnelles :</p>
           <p>
             Romain BRAND<br>
-            E-mail : <a href="mailto:aidesfinder.app@gmail.com">aidesfinder.app@gmail.com</a>
+            E-mail : <a href="mailto:aidesfinder.app@gmail.com">aidesfinder.app@gmail.com</a><br>
+            Délai de réponse : 30 jours maximum
           </p>
 
         </article>
@@ -211,9 +277,9 @@
       <div>&copy; 2026 RideBuddy. Tous droits réservés.</div>
       <nav class="footer__links" aria-label="Liens légaux">
         <a href="../mentions-legales">Mentions légales</a>
-        <a href="../confidentialite" aria-current="page">Politique de confidentialité</a>
+        <a href="../confidentialite" aria-current="page">Confidentialité</a>
         <a href="../cgu">CGU</a>
-        <a href="mailto:aidesfinder.app@gmail.com">Contact</a>
+        <a href="../contact">Contact</a>
       </nav>
     </div>
   </footer>
